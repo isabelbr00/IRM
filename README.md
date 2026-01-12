@@ -41,6 +41,18 @@ pip install -r requirements.txt
  
 ---
 
+## Experimental Setup
+
+We create three training environments with different spurious correlations between color and label:
+
+- **Environment 1**: 90% correlation
+- **Environment 2**: 80% correlation
+- **Environment 3**: 70% correlation
+
+The **test environment** is unbiased (50% correlation). This setup makes IRM’s goal of learning invariant features more evident.
+
+---
+
 ## Running the Experiments
 Train with ERM:
 python train_erm.py
@@ -59,6 +71,14 @@ The ERM model learns the spurious correlation (color) and fails on the test set.
 ### Invariant Risk Minimization (IRM)
 The IRM model focuses on invariance and maintains stable performance on the test set.
 ![IRM Accuracy Plot](irm_accuracy_plot.png)
+
+---
+
+## Interpretation
+
+The ERM model quickly learns the spurious correlation and obtains high accuracy in training environments but fails to generalize to the unbiased test environment. 
+
+In contrast, IRM sacrifices some training accuracy in order to learn features that generalize better, resulting in improved accuracy on the unbiased test environment.
 
 ---
 
