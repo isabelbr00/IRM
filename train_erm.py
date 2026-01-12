@@ -4,8 +4,6 @@ import matplotlib.pyplot as plt
 from torch.utils.data import TensorDataset, DataLoader
 from model import MLP
 from colored_mnist import get_colored_mnist
-from brightness_mnist import get_brightness_mnist as get_colored_mnist
-
 
 def train_erm(epochs=501, lr=0.001, batch_size=256):
     # Use GPU if available, otherwise CPU
@@ -60,7 +58,7 @@ def train_erm(epochs=501, lr=0.001, batch_size=256):
                 test_acc_list.append(accs[3])
                 steps.append(step)
 
-    print(f"Step {step}: Env1={accs[0]:.3f}, Env2={accs[1]:.3f}, Env3={accs[2]:.3f}, Test={accs[3]:.3f}")
+        print(f"Step {step}: Env1={accs[0]:.3f}, Env2={accs[1]:.3f}, Env3={accs[2]:.3f}, Test={accs[3]:.3f}")
     
     # Plot after training
     plt.figure(figsize=(8, 5))
