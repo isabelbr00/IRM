@@ -26,7 +26,7 @@ irm-demo/
 ### 1. Clone the repository
 
 bash
-git clone https://github.com/yourusername/irm-demo.git
+git clone [https://github.com/yourusername/irm-demo.git](https://github.com/isabelbr00/IRM.git)
 cd irm-demo
 
 ### 2. Install dependencies
