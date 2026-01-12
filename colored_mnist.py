@@ -49,6 +49,7 @@ def get_colored_mnist():
     """
     
     # Here, we'll add a third environment with a different color-label correlation
+    
     # Split training data into three parts
     env1_imgs, env1_labels = make_environment(
         mnist_train.data[:16667], mnist_train.targets[:16667], color_prob=0.9
@@ -66,5 +67,4 @@ def get_colored_mnist():
         mnist_test.data, mnist_test.targets, color_prob=0.5
     )
 
-    #return [(env1_imgs, env1_labels), (env2_imgs, env2_labels)], (test_imgs, test_labels)
     return [(env1_imgs, env1_labels), (env2_imgs, env2_labels), (env3_imgs, env3_labels)], (test_imgs, test_labels)
