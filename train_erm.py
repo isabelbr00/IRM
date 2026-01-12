@@ -45,7 +45,6 @@ def train_erm(epochs=501, lr=0.001, batch_size=256):
         if step % 50 == 0:
             with torch.no_grad():
                 accs = []
-                #for name, (x_env, y_env) in zip(["env1", "env2", "test"], environments + [test_data]):
                 for name, (x_env, y_env) in zip(["env1", "env2", "env3", "test"], environments + [test_data]):
                     x_env, y_env = x_env.to(device), y_env.to(device)
                     preds = (torch.sigmoid(model(x_env).squeeze()) > 0.5).float()
