@@ -59,6 +59,7 @@ The ERM model learns the spurious correlation (color) and fails on the test set.
 ### Invariant Risk Minimization (IRM)
 The IRM model focuses on invariance and maintains stable performance on the test set.
 ![IRM Accuracy Plot](irm_accuracy_plot.png)
+
 ---
 
 ## References
