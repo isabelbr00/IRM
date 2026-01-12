@@ -85,4 +85,4 @@ In contrast, IRM sacrifices some training accuracy in order to learn features th
 ## References
 
 Arjovsky, M., Bottou, L., Gulrajani, I., & Lopez-Paz, D. (2019).
-Invariant Risk Minimization
+[Invariant Risk Minimization](https://arxiv.org/abs/1907.02893)
