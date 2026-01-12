@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 from torch.utils.data import TensorDataset, DataLoader
 from model import MLP
 from colored_mnist import get_colored_mnist
-from brightness_mnist import get_brightness_mnist as get_colored_mnist
 
 
 # IRM penalty: gradient of the loss w.r.t. a scalar
