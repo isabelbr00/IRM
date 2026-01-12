@@ -18,7 +18,7 @@ irm-demo/
 
 ├── train_erm.py # Standard ERM training
 
-├── train_irm.py # (To be implemented) IRM training with penalty
+├── train_irm.py # IRM training with penalty
 
 ├── requirements.txt # Required Python packages
 
