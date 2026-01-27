@@ -11,6 +11,7 @@ To show how IRM can improve **out-of-distribution (OOD) generalization** compare
 ## Project Structure
 
 IRM/
+
 ├── colored_mnist.py # Generates Colored MNIST environments
 
 ├── colored_fashion_mnist.py # Generates Colored Fashion MNIST environments
