@@ -12,11 +12,17 @@ To show how IRM can improve **out-of-distribution (OOD) generalization** compare
 
 IRM/
 ├── colored_mnist.py # Generates Colored MNIST environments
+
 ├── colored_fashion_mnist.py # Generates Colored Fashion MNIST environments
+
 ├── model.py # Simple MLP classifier
+
 ├── train_erm.py # Standard ERM training
+
 ├── train_irm.py # IRM training with penalty
+
 ├── requirements.txt # Required Python packages
+
 └── README.md # Project instructions and description
 
 
