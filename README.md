@@ -10,11 +10,12 @@ To show how IRM can improve **out-of-distribution (OOD) generalization** compare
 
 ## Project Structure
 
-irm-demo/
+IRM/
 ├── colored_mnist.py # Generates Colored MNIST environments
+├── colored_fashion_mnist.py # Generates Colored Fashion MNIST environments
 ├── model.py # Simple MLP classifier
 ├── train_erm.py # Standard ERM training
-├── train_irm.py # (To be implemented) IRM training with penalty
+├── train_irm.py # IRM training with penalty
 ├── requirements.txt # Required Python packages
 └── README.md # Project instructions and description
 
@@ -26,8 +27,8 @@ irm-demo/
 ### 1. Clone the repository
 
 bash
-git clone https://github.com/yourusername/irm-demo.git
-cd irm-demo
+git clone https://github.com/yourusername/IRM.git
+cd IRM
 
 ### 2. Install dependencies
 
@@ -37,15 +38,16 @@ pip install -r requirements.txt
 
 ## Running the Experiments
 Train with ERM:
-python train_erm.py
+python train_erm.py --dataset mnist
 python train_erm.py --dataset fashion
 
 Train with IRM:
 python train_irm.py --dataset mnist
 python train_irm.py --dataset fashion
+
 ---
 
-### 📊 Experimental Results
+### Experimental Results
 
 This project compares the performance of ERM and IRM across two datasets: **Colored MNIST** (Digits) and **Colored Fashion MNIST** (Clothing).
 
