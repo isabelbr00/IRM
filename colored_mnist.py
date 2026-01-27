@@ -34,37 +34,28 @@ def get_colored_mnist():
     mnist_train = datasets.MNIST(root='data', train=True, download=True)
     mnist_test = datasets.MNIST(root='data', train=False, download=True)
 
-    """"
-    ## In this part, we reproduce the main results from the paper.
-
-    # First environment: strong correlation (90%)
-    env1_imgs, env1_labels = make_environment(
-        mnist_train.data[:25000], mnist_train.targets[:25000], color_prob=0.9
-    )
-
-    # Second environment: weaker correlation (80%)
-    env2_imgs, env2_labels = make_environment(
-        mnist_train.data[25000:], mnist_train.targets[25000:], color_prob=0.8
-    )
-    """
-    
-    # Here, we'll add a third environment with a different color-label correlation
+    # In this part, we reproduce the main results from the paper.
     
     # Split training data into three parts
+    # env1 -> 90% correlation
     env1_imgs, env1_labels = make_environment(
         mnist_train.data[:16667], mnist_train.targets[:16667], color_prob=0.9
     )
+    # env2 -> 80% correlation
     env2_imgs, env2_labels = make_environment(
         mnist_train.data[16667:33334], mnist_train.targets[16667:33334], color_prob=0.8
     )
+    
+    # Here, we'll add a third environment with a different color-label correlation
+    # env3 -> 70% correlation
     env3_imgs, env3_labels = make_environment(
         mnist_train.data[33334:], mnist_train.targets[33334:], color_prob=0.7
     )
 
 
-    # Test environment: no correlation (50%)
+    # Test environment: no correlation (10%)
     test_imgs, test_labels = make_environment(
-        mnist_test.data, mnist_test.targets, color_prob=0.5
+        mnist_test.data, mnist_test.targets, color_prob=0.1
     )
 
     return [(env1_imgs, env1_labels), (env2_imgs, env2_labels), (env3_imgs, env3_labels)], (test_imgs, test_labels)
