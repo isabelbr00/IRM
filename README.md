@@ -34,7 +34,7 @@ IRM/
 ### 1. Clone the repository
 
 bash
-git clone [URL HTTPS](https://github.com/isabelbr00/IRM.git)
+git clone https://github.com/isabelbr00/IRM.git
 cd IRM
 
 ### 2. Install dependencies
